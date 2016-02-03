@@ -19,7 +19,7 @@ anotherone = "http://www.compciv.org/files/datadumps/apis/mapzen/search-stanford
 resp = requests.get(googlemaps_url)
 googlemaps_path = os.path.join("tempdata", "googlemaps", "stanford.json")
 googlemaps_file = open(googlemaps_path, 'w')
-googlemaps_file.write(resp.content)
+googlemaps_file.write(resp.text)
 
 googlemaps_file = open(googlemaps_path, 'r')
 for line in googlemaps_file:

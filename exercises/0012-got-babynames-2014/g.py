@@ -2,11 +2,8 @@ import os
 import requests 
 import string
 
-url = "http://stash.compciv.org/ssa_baby_names/ssa-babynames-nationwide-2014.txt"
-resp = requests.get(url)
 babynames = os.path.join("tempdata","ssa_baby_names","ssa-babynames-nationwide-2014.txt")
-zfile = open(babynames, 'wb')
-zfile.write(resp.content)
+zfile = open(babynames, 'w')
 xfile = open(babynames, 'r')
 
 print('letter         F       M')

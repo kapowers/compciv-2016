@@ -7,14 +7,19 @@ txt = geocode.read()
 geocode.close()
 
 mydict = json.loads(txt)
-mykeys = mydict.keys()
-mylist = list(mkeys)
-myvals = mydict.values()
-listvals = list(myvals)
+features = mydict['features']
+
+#features[1]['properties']
 
 #For each object within the Feature list
-For x in mydict.values():
-	mydict.get('label')
-	mydict.get
-#	find the label, confidence
-# 	find the long and latitude within the coordinates object
+for feature in features:
+	mylist = []
+	props = feature['properties']
+	coords = feature['geometry']['coordinates']
+	#print(props['label'], props['confidence']
+	mylist.append(props['label'])
+	mylist.append(str(props['confidence']))
+	mylist.append(str(coords[0]))
+	mylist.append(str(coords[1]))
+	print(";".join(mylist))
+
