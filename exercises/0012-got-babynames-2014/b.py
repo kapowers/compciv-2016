@@ -13,4 +13,4 @@ zfile = open(babynames, 'r')
 for line in zfile:
 	babies += int(line.split(',')[2])
 
-print("There are", babies ,"babies whose names were recorded in 2014")
+print("There are", babies ,"babies whose names were recorded in 2014.")

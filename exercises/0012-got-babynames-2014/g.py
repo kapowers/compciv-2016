@@ -2,14 +2,16 @@ import os
 import requests 
 import string
 
+url = "http://stash.compciv.org/ssa_baby_names/ssa-babynames-nationwide-2014.txt"
+resp = requests.get(url)
 babynames = os.path.join("tempdata","ssa_baby_names","ssa-babynames-nationwide-2014.txt")
 zfile = open(babynames, 'w')
+zfile.write(resp.text)
 xfile = open(babynames, 'r')
 
 print('letter         F       M')
 print('------------------------')
 
-#mydict = {'M': {}, 'F': {}} ##HOW DO YOU USE THIS NESTED ONE WITH THE BELOW CODE?
 ydict = {}
 xdict = {}
 
