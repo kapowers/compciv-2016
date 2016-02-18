@@ -1,29 +1,34 @@
 import os
-import requests 
-
-url = "http://stash.compciv.org/ssa_baby_names/ssa-babynames-nationwide-2014.txt"
-resp = requests.get(url)
-babynames = os.path.join("tempdata","ssa_baby_names","ssa-babynames-nationwide-2014.txt")
+filename = os.path.join("tempdata","ssa-babynames-nationwide-2014.txt")
 
 x = 0
 y = 0
 
-x_list = []
-f = open(babynames, 'r')
-for line in f:
+x_girl = []
+y_boy = []
+
+for line in open(filename,'r'):	
     name, sex, babies = line.strip().split(',')
-    if 'x' in name:
+    if 'x' in name.lower() and sex == 'F':
         row = [name, sex, int(babies)]
-        x_list.append(row)
-	    if sex == 'F' and x < 5:
-			if x == 0:
-				print('Females')
-			x += 1
-			print("%d. %s %s" % (x,name,babies))
-			if x == 5:
-				print('')
-		elif sex == 'M' and y < 5:
-			if y == 0:
-				print('Males')
-			y += 1
-			print("%d. %s %s" % (y,name,babies))
+        x_girl.append(row)
+print('Female')
+for girl in x_girl:
+	if int(girl[2]) > 1588:
+		x += 1
+		name = girl[0]
+		babies = girl[2]
+		print("%d. %s             %s" % (x,name.ljust(11),babies))
+
+for line in open(filename,'r'):	
+    name, sex, babies = line.strip().split(',')
+    if 'x' in name.lower() and sex == 'M':
+        row = [name, sex, int(babies)]
+        y_boy.append(row)
+print('Male')
+for dude in y_boy:
+	if int(dude[2]) > 3702:
+		y += 1
+		dudename = dude[0]
+		dudebabies = dude [2]
+		print("%d. %s            %s" % (y,dudename.ljust(11),dudebabies))

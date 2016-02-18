@@ -1,28 +1,32 @@
-import requests
 import os
-if not os.path.exists('tempdata/ssa_baby_names'):
-	os.makedirs('tempdata/ssa_baby_names')
-from glob import glob
+filename = os.path.join("tempdata","ssa-babynames-nationwide-2014.txt")
 
-url = "http://stash.compciv.org/ssa_baby_names/ssa-babynames-nationwide-2014.txt"
-resp = requests.get(url)
-babynames = os.path.join("tempdata","ssa_baby_names","ssa-babynames-nationwide-2014.txt")
+namesdict = {}
 
-namedict = {}
+for line in open(filename, 'r'):
+	name, sex, babies = line.strip().split(',')
+	if namesdict.get(name):
+		namesdict[name] += int(babies)
+	else:
+		namesdict[name] = int(babies)
 
-with open(babynames) as b:
-	for line in b:
-		name, sex, babies = line.strip().split(',')
-		if namesdict.get(name):
-			namesdict[name] += int(babies)
-		else:
-			namesdict[name] = int(babies)
-	print(name,babies)
-	#filter to include only key-value pairs in which value is at least 2,000
-	#sort by length of name and # of babies
-def namelength():
-	return len(name)
-sorted(babylist, key = namelength)
-def babynumber():
-	return babies
-sorted(babylist), key = babynumber)
+items = namesdict.items()
+mylist = list(items)
+popular_names_list = [] 
+
+for key, val in items:
+	if val > 1999 and key not in popular_names_list:
+		num = val
+		popular_names_list.append([key, val])
+	if key in popular_names_list:
+		num = int(val) + int(popular_names_list[1])
+		popular_names_list.append([key,num])
+
+def foo(x):
+	return (len(x[0]), x[1])
+
+anotherone = sorted(popular_names_list, key = foo, reverse=True)
+again = anotherone[0:10]
+
+for baby in again:
+	print(baby[0].ljust(10), str(baby[1]).rjust(10))
