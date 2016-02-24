@@ -13,8 +13,8 @@ myitems = namesdict.items()
 mylist = list(myitems)
 
 allbabies = 0
-for foo in mylist:
-	allbabies += foo[1]
+for you in mylist:
+	allbabies += you[1]
 
 def foo(x):
 	return(x[1])
