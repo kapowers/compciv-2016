@@ -1,0 +1,19 @@
+{"images":[
+	{"image":"d.jpg",
+	 "scores":[
+		 {"classifier_id":"Sawhorse","name":"Sawhorse","score":0.691278},
+		 {"classifier_id":"Indoors","name":"Indoors","score":0.665902},
+		 {"classifier_id":"Appliance","name":"Appliance","score":0.643373},
+		 {"classifier_id":"Beverage","name":"Beverage","score":0.638261},
+		 {"classifier_id":"Bottle","name":"Bottle","score":0.631321},
+		 {"classifier_id":"Residential_Space","name":"Residential_Space","score":0.628558},
+		 {"classifier_id":"Repairing","name":"Repairing","score":0.602598},
+		 {"classifier_id":"Laundry_Room","name":"Laundry_Room","score":0.573631},
+		 {"classifier_id":"Parkour","name":"Parkour","score":0.570452},
+		 {"classifier_id":"Clothing_Store","name":"Clothing_Store","score":0.569426},
+		 {"classifier_id":"Boxing","name":"Boxing","score":0.556046},
+		 {"classifier_id":"Gray","name":"Gray","score":0.54054},
+		 {"classifier_id":"Birthday_Party","name":"Birthday_Party","score":0.518234},
+		 {"classifier_id":"Hollywood","name":"Hollywood","score":0.515108},
+		 {"classifier_id":"Black","name":"Black","score":0.511151}]}]
+}

@@ -1,0 +1,20 @@
+{"images":[
+	{"image":"f.jpg",
+	 "scores":[
+		 {"classifier_id":"Sky_Scene","name":"Sky_Scene","score":0.733588},
+		 {"classifier_id":"Dolphin","name":"Dolphin","score":0.70436},
+		 {"classifier_id":"Blue","name":"Blue","score":0.703459},
+		 {"classifier_id":"Outdoors","name":"Outdoors","score":0.689165},
+		 {"classifier_id":"Toothed_Whale","name":"Toothed_Whale","score":0.688506},
+		 {"classifier_id":"Whale,_Dolphin_or_Porpoise","name":"Whale,_Dolphin_or_Porpoise","score":0.681745},
+		 {"classifier_id":"Ice_Scene","name":"Ice_Scene","score":0.680854},
+		 {"classifier_id":"Scene","name":"Scene","score":0.64913},
+		 {"classifier_id":"Rainbow","name":"Rainbow","score":0.643818},
+		 {"classifier_id":"Frozen_Waterbody","name":"Frozen_Waterbody","score":0.641728},
+		 {"classifier_id":"Wild_Fire","name":"Wild_Fire","score":0.620598},
+		 {"classifier_id":"Air_Sport","name":"Air_Sport","score":0.600476},
+		 {"classifier_id":"Octopus","name":"Octopus","score":0.569355},
+		 {"classifier_id":"Ski_Jumping","name":"Ski_Jumping","score":0.55927},
+		 {"classifier_id":"Underwater_Sport","name":"Underwater_Sport","score":0.554718},
+		 {"classifier_id":"Landmark","name":"Landmark","score":0.522673}]}]
+}

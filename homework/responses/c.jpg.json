@@ -1,0 +1,22 @@
+{"images":[
+	{"image":"c.jpg",
+	 "scores":[
+		 {"classifier_id":"Big_Group","name":"Big_Group","score":0.719117},
+		 {"classifier_id":"Group_of_People","name":"Group_of_People","score":0.682381},
+		 {"classifier_id":"Bottle","name":"Bottle","score":0.649361},
+		 {"classifier_id":"Parade","name":"Parade","score":0.638479},
+		 {"classifier_id":"Beverage","name":"Beverage","score":0.612724},
+		 {"classifier_id":"Icicles","name":"Icicles","score":0.610234},
+		 {"classifier_id":"Bird","name":"Bird","score":0.606443},
+		 {"classifier_id":"Celebration","name":"Celebration","score":0.60306},
+		 {"classifier_id":"Vivarium","name":"Vivarium","score":0.589394},
+		 {"classifier_id":"People","name":"People","score":0.58879},
+		 {"classifier_id":"Crowd","name":"Crowd","score":0.587691},
+		 {"classifier_id":"Military_Parade","name":"Military_Parade","score":0.587361},
+		 {"classifier_id":"Corn_Field","name":"Corn_Field","score":0.586825},
+		 {"classifier_id":"Mixed_Color","name":"Mixed_Color","score":0.578288},
+		 {"classifier_id":"Dancing","name":"Dancing","score":0.573656},
+		 {"classifier_id":"Sky_Scene","name":"Sky_Scene","score":0.557058},
+		 {"classifier_id":"Ice_Scene","name":"Ice_Scene","score":0.533696},
+		 {"classifier_id":"Human","name":"Human","score":0.507614}]}]
+}

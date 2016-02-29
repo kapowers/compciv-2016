@@ -1,0 +1,20 @@
+{"images":[
+	{"image":"a.jpg",
+	 "scores":[
+		 {"classifier_id":"Graduation","name":"Graduation","score":0.683537},
+		 {"classifier_id":"Judo","name":"Judo","score":0.620706},
+		 {"classifier_id":"Clothing_Store","name":"Clothing_Store","score":0.605182},
+		 {"classifier_id":"Vise","name":"Vise","score":0.591479},
+		 {"classifier_id":"Clothing","name":"Clothing","score":0.586876},
+		 {"classifier_id":"Child_Room","name":"Child_Room","score":0.580137},
+		 {"classifier_id":"Repairing","name":"Repairing","score":0.57501},
+		 {"classifier_id":"Mixed_Type","name":"Mixed_Type","score":0.568836},
+		 {"classifier_id":"Celebration","name":"Celebration","score":0.564528},
+		 {"classifier_id":"Coat","name":"Coat","score":0.536747},
+		 {"classifier_id":"Mixed_Color","name":"Mixed_Color","score":0.53603},
+		 {"classifier_id":"Scene","name":"Scene","score":0.532513},
+		 {"classifier_id":"Big_Group","name":"Big_Group","score":0.529565},
+		 {"classifier_id":"Engine_or_Control_Room","name":"Engine_or_Control_Room","score":0.528626},
+		 {"classifier_id":"Tool","name":"Tool","score":0.523801},
+		 {"classifier_id":"Child","name":"Child","score":0.518748}]}]
+}

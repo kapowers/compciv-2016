@@ -1,0 +1,19 @@
+{"images":[
+	{"image":"b.jpg",
+	 "scores":[
+		 {"classifier_id":"Riot","name":"Riot","score":0.730391},
+		 {"classifier_id":"Food_Processor","name":"Food_Processor","score":0.702333},
+		 {"classifier_id":"Appliance","name":"Appliance","score":0.682521},
+		 {"classifier_id":"Rollerskating","name":"Rollerskating","score":0.665904},
+		 {"classifier_id":"Coffee_Maker","name":"Coffee_Maker","score":0.657568},
+		 {"classifier_id":"Scene","name":"Scene","score":0.648144},
+		 {"classifier_id":"Indoors","name":"Indoors","score":0.63228},
+		 {"classifier_id":"Art_Gallery","name":"Art_Gallery","score":0.6018},
+		 {"classifier_id":"Placental_Mammal","name":"Placental_Mammal","score":0.59802},
+		 {"classifier_id":"Laundry_Room","name":"Laundry_Room","score":0.594041},
+		 {"classifier_id":"Meeting","name":"Meeting","score":0.592455},
+		 {"classifier_id":"Activity","name":"Activity","score":0.584048},
+		 {"classifier_id":"Girl","name":"Girl","score":0.565681},
+		 {"classifier_id":"Group_of_People","name":"Group_of_People","score":0.537731},
+		 {"classifier_id":"Human","name":"Human","score":0.517828}]}]
+}
