@@ -17,5 +17,5 @@ with open(DATA_ZIP_PATH, 'wb') as f:
 
 unpack_archive(DATA_ZIP_PATH, extract_dir=DATA_FOLDER)
 
-babynamenames = glob(join(DATA_DIR, '*.txt'))
+babynamenames = glob(join(DATA_FOLDER, '*.txt'))
 print("There are", len(babynamenames), 'txt files')
