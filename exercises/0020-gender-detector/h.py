@@ -12,11 +12,6 @@ for r in datarows:
 	r['females'] = int(r['females'])
 	r['ratio'] = int(r['ratio'])
 
-bigdatarows = []
-for row in datarows:
-	if int(r['total']) >= 100:
-		bigdatarows.append(row)
-
 print("Most popular names with less than 60% gender skew:")
 hugedatarows = sorted(datarows, key = lambda r: r['total'], reverse = True)
 fxrows = [r for r in datarows if r['ratio'] <= 60]

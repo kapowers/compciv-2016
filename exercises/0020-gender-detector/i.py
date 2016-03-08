@@ -14,9 +14,15 @@ for r in datarows:
 
 bigdatarows = []
 for row in datarows:
-	if int(r['total']) >= 100:
+	if int(row['total']) >= 100:
 		bigdatarows.append(row)
 
 print("Popular names with a gender ratio bias of less than or equal to:")
 for genderratio in (60,70,80,90,99):
-	print('r['ratio'])'%':' len(bigdatarows)/ int(r['total'])
+	
+	filteredrows = []
+	for row in bigdatarows:
+		if row['ratio'] <= genderratio:
+			filteredrows.append(row)
+
+	print(genderratio,"%: ", len(filteredrows), "/", len(bigdatarows))
