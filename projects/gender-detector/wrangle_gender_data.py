@@ -1,50 +1,38 @@
 from os.path import join, basename
-import csv
-DATA_FOLDER = 'tempdata'
-
-WRANGLED_HEAD = ['name', 'gender', 'ratio', 'females', 'males', 'total']
-WRANGLED_DATA_FILE = join(DATA_FOLDER, 'wrangledbabynames.csv')
+import json
+BABY_DATA_DIR = join('tempdata', 'babynames')
+WRANGLED_DATA_FILENAME = join(BABY_DATA_DIR, 'wrangledbabynames.json')
 START_YEAR = 1950
 END_YEAR = 2014
 
 years = list(range(START_YEAR, END_YEAR, 10))
 years.append(END_YEAR)
 
-namedict = {}
+namesdict = {}
 for year in years:
-	filename = join(DATA_FOLDER, 'yob' + str(year) + '.txt')
-	print("Parsing", filename)
-	with open(filename, 'r') as thatfile:
-		for line in thatfile:
-			name, gender, count = line.split(',')
-			if not namedict.get(name):
-				namedict[name] = {'F': 0, 'M': 0}
-			namedict[name][gender] += int(count)
+    filename = join(BABY_DATA_DIR, 'yob' + str(year) + '.txt')
+    print("Parsing", filename)
+    with open(filename, 'r') as thefile:
+        for line in thefile:
+            name, gender, count = line.split(',')
+            if not namesdict.get(name): 
+                namesdict[name] = {'F': 0, 'M': 0}
+            namesdict[name][gender] += int(count)
 
-bad_ass_list = []
-for name, babiescount in namedict.items():
-	xdict = {'name': name, 'females': babiescount['F'], 'males': babiescount['M']}
-	xdict['total'] = xdict['males'] + xdict['females']
-	if xdict['females'] >= xdict['males']:
-		xdict['gender'] = 'F'
-		xdict['ratio'] = round(100 * xdict['females'] / xdict['total'])
-	else:
-		xdict['gender'] = 'M'
-		xdict['ratio'] = round(100 * xdict['males'] / xdict['total'])
-	bad_ass_list.append(xdict)
+my_awesome_list = []
 
-yofile = open(WRANGLED_DATA_FILE, 'w')
-yocsv = csv.DictWriter(yofile, fieldnames=WRANGLED_HEAD)
-yocsv.writeheader()
+for name, babiescount in namesdict.items():
+    xdict = {'name': name, 'females': babiescount['F'], 'males': babiescount['M']}
+    xdict['total'] = xdict['males'] + xdict['females']
+    if xdict['females'] >= xdict['males']:
+        xdict['gender'] = 'F'
+        xdict['ratio'] = round(100 * xdict['females'] / xdict['total'])
+    else:
+        xdict['gender'] = 'M'
+        xdict['ratio'] = round(100 * xdict['males'] / xdict['total'])
+    my_awesome_list.append(xdict)
 
-def order(xdict):
-	return(-xdict['total'],xdict['name'])
+with open(WRANGLED_DATA_FILENAME, 'w') as j:
+    j.write(json.dumps(my_awesome_list, indent=2))
 
-for row in sorted(bad_ass_list, key = order):
-	yocsv.writerow(row)
 
-yofile.close()
-
-with open(WRANGLED_DATA_FILE, 'r') as t:
-	for line in t.readlines()[0:5]:
-		print(line.strip())

@@ -1,11 +1,10 @@
 from os.path import join
 import json
-WRANGLED_DIR = 'tempdata/wrangled'
-WRANGLED_CSV_FILENAME = join(WRANGLED_DIR, 'wranglednames.csv')
-NAMES_DATA_ROWS = open(WRANGLED_CSV_FILENAME)
+WRANGLED_DATA_FILENAME = join('tempdata', 'babynames', 'wrangledbabynames.json')
+NAMES_DATA_ROWS = json.load(open(WRANGLED_DATA_FILENAME))
 
 def detect_gender(name):
-    result = { 'name': name, 'gender': None, 'ratio': None, 'males': 0, 'females': 0, 'total': 0 }
+    result = { 'name': name, 'gender': 'NA', 'ratio': None, 'males': None, 'females': None, 'total': 0 }
     for row in NAMES_DATA_ROWS:
         if name.lower() == row['name'].lower():
             result = row
