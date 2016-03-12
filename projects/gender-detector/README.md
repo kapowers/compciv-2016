@@ -8,16 +8,16 @@ Findings: Trevor Noah has substantially more male guests than female guests in h
 I created my own CSV for this project. I copied and pasted all the information of guests from [this Wikipedia page listing Trevor Noah's guest for part of 2015](https://en.wikipedia.org/wiki/List_of_The_Daily_Show_episodes_(2015)#2015_.28under_Noah.29) 
 and [this Wikipedia page of his guests thus far in 2016](https://en.wikipedia.org/wiki/List_of_The_Daily_Show_episodes_(2016)). The final dataset can be found in [my Github](https://github.com/kapowers/compciv-2016/blob/master/projects/gender-detector/Stash/Trevor%20Noah%20Guests.csv)
 
-I will analyze about ~60 records. I will try to separate the names of the record such as Joe Doe to just 'Joe' and then classify gender based upon the name. I will split the name using the below function to split and then only classify the first element in the list:
-	def extractable_usable_name(name):
+I will analyze about ~60 records. I will try to separate the names of the record such as Joe Doe to just 'Joe' and then classify gender based upon the name. I will split the name using the below function to split and then only classify the first element in the list: <br />
+	def extractable_usable_name(name): <br/>
 		return name.split(' ')[0]
 
 One of the problems I was unable to resolve was the presence of "''" in front of Rand Paul's name. It was literally the only name that had a weird error that could not be edited in the original data set. 
 
 ## Past Research and articles
--[When Women Run the Show, TV's Gender Gap Narrows](http://www.takepart.com/article/2015/09/15/women-television): This research discusses how when women run television networks, the gender gap on TV narrows. This precludes that women are generally not represented on TV programming, partiularly host shows, like the one I am analyzing, which is run by a man.
--[Closing the TV-Guest Gender Gap](http://www.theatlantic.com/entertainment/archive/2015/03/how-to-get-more-women-on-tv/386378/): This article speaks directly to the challenges hosts have in finding a balanced 50/50 guest list based on gender. I assume this will eventually make me more empathatic to the "plight" Trevor Noah faces in finding "quality TV" guests. (sarcasm deeply intended)
--[Gender and Ethnic Diversity in Prime-Time Cable News](http://mediamatters.org/research/diversity_report/): More depressing statistics and similar findings that show the overrepresentation in men in prime time television. 
+- [When Women Run the Show, TV's Gender Gap Narrows](http://www.takepart.com/article/2015/09/15/women-television): This research discusses how when women run television networks, the gender gap on TV narrows. This precludes that women are generally not represented on TV programming, partiularly host shows, like the one I am analyzing, which is run by a man.
+- [Closing the TV-Guest Gender Gap](http://www.theatlantic.com/entertainment/archive/2015/03/how-to-get-more-women-on-tv/386378/): This article speaks directly to the challenges hosts have in finding a balanced 50/50 guest list based on gender. I assume this will eventually make me more empathatic to the "plight" Trevor Noah faces in finding "quality TV" guests. (sarcasm deeply intended)
+- [Gender and Ethnic Diversity in Prime-Time Cable News](http://mediamatters.org/research/diversity_report/): More depressing statistics and similar findings that show the overrepresentation in men in prime time television. 
 
 ## How to
 - fetch_data.py - Running this script will download a CSV file of guests on The Daily Show with Trevor Noah, including the year they appeared and the description of their show.
