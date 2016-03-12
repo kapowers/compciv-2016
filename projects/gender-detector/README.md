@@ -9,8 +9,8 @@ I created my own CSV for this project. I copied and pasted all the information o
 and [this Wikipedia page of his guests thus far in 2016](https://en.wikipedia.org/wiki/List_of_The_Daily_Show_episodes_(2016)). The final dataset can be found in [my Github](https://github.com/kapowers/compciv-2016/blob/master/projects/gender-detector/Stash/Trevor%20Noah%20Guests.csv)
 
 I will analyze about ~60 records. I will try to separate the names of the record such as Joe Doe to just 'Joe' and then classify gender based upon the name. I will split the name using the below function to split and then only classify the first element in the list: <br />
-	def extractable_usable_name(name): <br/>
-		return name.split(' ')[0]
+&nbsp;	def extractable_usable_name(name): <br/>
+&nbsp;&nbsp;		return name.split(' ')[0]
 
 One of the problems I was unable to resolve was the presence of "''" in front of Rand Paul's name. It was literally the only name that had a weird error that could not be edited in the original data set. 
 
